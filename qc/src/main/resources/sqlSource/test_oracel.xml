@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<commands>
+    <command id="oracle.getStatement1">
+        select * from framework_test_table_a where 1=1
+        {?? and id in ($id$)}
+    </command>
+
+    <command id="oracle.getStatement2">
+        select * from framework_test_table_a where 1=1
+        {? and userName like '%$userName$%'}
+    </command>
+
+    <command id="oracle.getStatement3">
+        select * from framework_test_table_b where 1=1
+        {?? and nickName = #otherName#}
+    </command>
+
+    <command id="oracle.getStatement4">
+        select * from framework_test_table_d where 1=1
+        {?? and user_pwd = #user_pwd#}
+        {?? and _userRole = #_userRole#}
+        {?? and resource_ = #resource_#}
+    </command>
+
+</commands>

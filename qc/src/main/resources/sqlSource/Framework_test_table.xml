@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<commands>
+    <command id="test.getStatement1">
+        select * from framework_test_table where 1=1
+        {?? and id in ($id$)}
+    </command>
+
+    <command id="test.getStatement2">
+        select * from framework_test_table where 1=1
+        {? and userName like '%$userName$%'}
+    </command>
+
+    <command id="test.getStatement3">
+        select * from framework_test_table3 where 1=1
+        {?? and nickName = #otherName#}
+    </command>
+
+    <command id="test.getStatement4">
+        select * from framework_test_table4 where 1=1
+        {?? and user_pwd = #user_pwd#}
+        {?? and _userRole = #_userRole#}
+        {?? and resource_ = #resource_#}
+    </command>
+
+    <command id="mysql.hasListModel">
+        select t1.*,t2.* from framework_test_table t1,framework_test_table2 t2
+        where t1.id='U0001'
+    </command>
+
+</commands>
